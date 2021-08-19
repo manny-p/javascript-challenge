@@ -12,7 +12,10 @@ const populateTable = (dataInput) => {
         let row = tbody.append('tr')
 
         Object.entries(sighting).forEach(([key, value]) => {
-            console.log(`${key} : ${value}`)
+            // console.log(`${key} : ${value}`)
+            let cell = row.append('td')
+            // cell.text(`${key} : ${value}`)
+            cell.text(value)
         })
     })
 }
