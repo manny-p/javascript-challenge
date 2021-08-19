@@ -1,4 +1,21 @@
 // from data.js
-var tableData = data;
+let tableData = data;
 
-// YOUR CODE HERE!
+// select tbody element
+let tbody = d3.select('tbody')
+
+// build table
+const populateTable = (dataInput) => {
+    tbody.innerHTML = ''
+
+    dataInput.forEach(sighting => {
+        let row = tbody.append('tr')
+
+        Object.entries(sighting).forEach(([key, value]) => {
+            console.log(`${key} : ${value}`)
+        })
+    })
+}
+
+// load data
+populateTable(tableData)
